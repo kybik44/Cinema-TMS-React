@@ -1,0 +1,12 @@
+.film-description__item {
+    padding: 10px 0;
+
+}
+
+.item-name {
+    color: #979797;
+    min-width: 100px;
+    margin-right: 27px;
+}
+
+.item-value {}

@@ -1,0 +1,101 @@
+.text {
+    font-family: Alata;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+
+
+    color: #3A236A;
+}
+
+.film-card {
+    display: flex;
+    justify-content: flex-start;
+    padding: 29px;
+    background: #FDFDFF;
+    border: 1px solid #EBEBEB;
+    border-radius: 13px;
+    max-width: 798px;
+}
+
+.film-info {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.film-intro {
+    display: flex;
+    margin-bottom: 33px;
+}
+
+.film-description__item {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.film-intro-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-right: 35px;
+}
+
+.film-poster {
+    margin-bottom: 33px;
+}
+
+.film-poster img {
+    max-width: 225px;
+    max-height: 340px;
+}
+
+.film-raiting-info {}
+
+.film-votes-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.film-vote-name {
+    font-size: 12px;
+    line-height: 17px;
+    color: #FFFFFF;
+    padding: 4px 15px;
+    background: #7F7FD5;
+    border: 1px solid #7F7FD5;
+    border-radius: 5px;
+    margin-right: 11px;
+}
+
+.film-raiting-value {
+    font-family: Alata;
+    font-size: 60px;
+    line-height: 83px;
+    color: #7F7FD5;
+    display: -webkit-box;
+}
+
+.film-title {
+    font-size: 24px;
+    line-height: 33px;
+    color: #7F7FD5;
+    align-self: flex-start;
+    margin-bottom: 32px;
+}
+
+.film-description {
+    display: flex;
+    flex-direction: column;
+}
+
+.film-description-column {
+    width: 100%;
+}
+
+
+.film-text {
+    font-size: 20px;
+}
