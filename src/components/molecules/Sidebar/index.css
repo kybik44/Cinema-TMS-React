@@ -1,0 +1,68 @@
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 100px;
+    background-color: #FDFDFF;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    display: flex;
+    align-items: center;
+    flex-direction:column;
+    justify-content: center;
+  }
+  
+  /* Сайдбар ссылки */
+  .sidebar a {
+    display: inline-block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+    width: 100%;
+  }
+  
+  /* Активная/текущая ссылка */
+  .sidebar a.active {
+  
+    color: white;
+    border-left: 5px solid #7F7FD5;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+  }
+  
+  /* Ссылки при наведении мыши */
+  .sidebar a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+  }
+  
+  /* Содержание страницы. Значение свойства margin-left должно соответствовать значению свойства width боковой панели */
+  div.content {
+    margin-left: 200px;
+    padding: 1px 16px;
+    height: 1000px;
+  }
+  
+  /* На экранах шириной менее 700 пикселей превратить боковую панель в верхнюю панель */
+  @media screen and (max-width: 700px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    .sidebar a {float: left;}
+    div.content {margin-left: 0;}
+  }
+  
+  /* На экранах размером менее 400 пикселей панель отображать вертикально, а не горизонтально */
+  @media screen and (max-width: 400px) {
+    .sidebar a {
+      text-align: center;
+      float: none;
+    }
+  }
+
+  img{
+      width: 20px;
+      height: 20px;
+  }

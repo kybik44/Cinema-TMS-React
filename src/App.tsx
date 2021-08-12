@@ -4,11 +4,15 @@ import "./App.css";
 import { Title } from "./components/atoms/Title";
 import { films } from "./mock";
 import { FilmCard } from "./components/molecules/FilmCard";
+import { Sidebar } from "./components/molecules/Sidebar";
+
 function App() {
   return (
     <div className="App">
+      <Sidebar />
       <main>
-        <Title title={"Наш сайт с фильмами"} />
+
+       < Title title={"Movie"} />
         <FilmCard {...films[2]} />
       </main>
     </div>

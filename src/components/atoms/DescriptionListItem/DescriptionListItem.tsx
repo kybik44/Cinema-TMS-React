@@ -4,7 +4,7 @@ import "./index.css";
 
 interface IDescriptionListItem {
   name: string;
-  value: string | number | [];
+  value: string | number;
 }
 
 export const DescriptionListItem = ({ name, value }: IDescriptionListItem) => (
