@@ -1,6 +1,6 @@
 import * as React from "react";
 import "./index.css";
-import { IFilm } from "../../../types";
+
 
 interface IDescriptionListItem {
   name: string;
