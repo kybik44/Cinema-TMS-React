@@ -1,0 +1,69 @@
+  /* На экранах размером менее 400 пикселей панель отображать вертикально, а не горизонтально */
+
+  /* Сайдбар ссылки */
+  .sidebar-link {
+      display: inline-block;
+      color: black;
+      padding: 16px;
+      text-decoration: none;
+      width: 100%;
+      position: relative;
+  }
+
+  /* Активная/текущая ссылка */
+  .sidebar-link.active::after {
+      content: "";
+      width: 0px;
+      height: 100%;
+      border-left: 4px solid #7F7FD5;
+      border-bottom-right-radius: 6px;
+      border-top-right-radius: 6px;
+      position: absolute;
+      top: 0;
+      left: 0;
+  }
+
+  /* Ссылки при наведении мыши */
+  .sidebar-link:hover:not(.active) {
+      background-color: #fff;
+      color: white;
+  }
+
+  .sidebar-link:hover:not(.active) .icon {
+      color: #c2c2f0;
+  }
+
+  .sidebar-link:hover:not(.active)::after {
+      content: "";
+      width: 0px;
+      height: 100%;
+      border-left: 4px solid #c2c2f0;
+      border-bottom-right-radius: 6px;
+      border-top-right-radius: 6px;
+      position: absolute;
+      top: 0;
+      left: 0;
+  }
+
+  @media screen and (max-width: 400px) {
+      .sidebar-link {
+          text-align: center;
+          float: none;
+      }
+  }
+
+  @media screen and (max-width: 700px) {
+      .sidebar .sidebar-link {
+          float: left;
+      }
+
+  }
+
+  .icon {
+      font-size: 23px;
+      color: #DFE6F1;
+  }
+
+  .sidebar-link.active .icon {
+      color: #7F7FD5;
+  }
