@@ -11,6 +11,7 @@ import {
   faIdCard,
   faCog,
 } from "@fortawesome/free-solid-svg-icons";
+import { Switch } from "../../atoms/Switch/Switch";
 
 export const Sidebar = () => (
   <div className="sidebar">
@@ -21,5 +22,9 @@ export const Sidebar = () => (
     <SidebarLink className="sidebar-link" icon={faPlay} href="#" />
     <SidebarLink className="sidebar-link" icon={faThList} href="#" />
     <SidebarLink className="sidebar-link" icon={faCog} href="#" />
+    <div className="switch-block">
+    <Switch />
+    </div>
+ 
   </div>
 );

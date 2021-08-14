@@ -36,3 +36,9 @@ div.content {
   width: 20px;
   height: 20px;
 }
+
+.switch-block{
+ position: absolute;
+ bottom: 25px;
+ left: 20px;
+}
