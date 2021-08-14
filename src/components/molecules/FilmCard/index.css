@@ -10,11 +10,12 @@
 .film-card {
     display: flex;
     justify-content: flex-start;
-    padding: 29px;
+    padding: 29px 29px 140px 29px;
     background: #FDFDFF;
     border: 1px solid #EBEBEB;
     border-radius: 13px;
     max-width: 798px;
+
 }
 
 .film-info {
