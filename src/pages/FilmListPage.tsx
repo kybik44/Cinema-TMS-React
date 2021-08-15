@@ -1,19 +1,17 @@
-import React, {Fragment} from 'react';
-import { Title } from '../components/atoms/Title';
+import React, { Fragment } from "react";
+import { Header } from "../components/molecules/Header";
+import { SmallFilmCard } from "../components/SmallFilmCard";
 import { films } from "../mock";
-import {FilmCard} from '../components/molecules/FilmCard'
-export const FilmListPage = () => {
 
-    return (
-        <div>
- < Title title={"Movies"} />
-        <div>
-            {films.map((film) => {
-            return <FilmCard key={film.id} {...film} />;
-          })}
-        </div>
-        </div>
-       
-        
-    )
-}
+export const FilmListPage = () => {
+  return (
+    <div>
+      <Header title="Movies" />
+      <div className="small-card-list">
+        {films.map((film) => {
+          return <SmallFilmCard key={film.id} {...film} />;
+        })}
+      </div>
+    </div>
+  );
+};

@@ -10,7 +10,7 @@
 .film-card {
     display: flex;
     justify-content: flex-start;
-    padding: 29px 29px 140px 29px;
+    padding: 29px 43px 140px 29px;
     background: #FDFDFF;
     border: 1px solid #EBEBEB;
     border-radius: 13px;
@@ -26,7 +26,7 @@
 
 .film-intro {
     display: flex;
-    margin-bottom: 33px;
+    margin-bottom: 42px;
 }
 
 .film-description__item {
@@ -58,6 +58,3 @@
     flex-direction: column;
 }
 
-.film-text {
-    font-size: 20px;
-}

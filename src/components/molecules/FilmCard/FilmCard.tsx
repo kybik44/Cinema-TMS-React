@@ -4,6 +4,9 @@ import { IFilm } from "../../../types";
 import { FilmDescriptionList } from "../FilmDescriptionList";
 import { Poster } from "../../atoms/Poster";
 import { Raiting } from "../../atoms/Raiting";
+import { Title } from "../../atoms/Title";
+import { Plot } from "../../atoms/Plot";
+
 
 export const FilmCard = ({
   year,
@@ -26,13 +29,13 @@ export const FilmCard = ({
     <div className="film-info">
       <div className="film-intro">
         <div className="film-intro-info">
-          <div className="film-poster">
-            <Poster src={poster} width="225px" height="340px" />
-          </div>
+
+            <Poster src={poster} width="225px" height="340px" isSmallCard={false}/>
+         
           <Raiting imdbVotes={imdbVotes} imdbRating={imdbRating} />
         </div>
         <div className="film-description">
-          <h2 className="film-title">{title}</h2>
+          <Title title={title} isSmallCard={false}/>
           <FilmDescriptionList
             year={year}
             poster={poster}
@@ -48,7 +51,7 @@ export const FilmCard = ({
           />
         </div>
       </div>
-      <p className="film-text text">{plot}</p>
+     <Plot text={plot} isSmallCard={false} />
     </div>
   </div>
 );

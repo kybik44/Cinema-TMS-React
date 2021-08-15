@@ -115,3 +115,7 @@ main {
   padding-bottom: 120px;
   width: 90%;
 }
+.small-card-list{
+  display: flex;
+  flex-wrap: wrap;
+}

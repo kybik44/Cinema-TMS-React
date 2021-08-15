@@ -3,6 +3,7 @@ import "./index.css";
 
 interface ITitle {
   title: string;
+  isSmallCard: boolean;
 }
 
-export const Title = ({ title }: ITitle) => <h2 className="title">{title}</h2>;
+export const Title = ({ title, isSmallCard }: ITitle) => <h2 className={isSmallCard ? "small-card-title title" : "big-card-title title"}>{title}</h2>;
