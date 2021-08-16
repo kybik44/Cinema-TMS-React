@@ -1,6 +1,5 @@
 import * as React from "react";
 import "./index.css";
-import Vector from "../../../public/images/Vector.svg";
 import { SidebarLink } from "../../atoms/SidebarLink/SidebarLink";
 import {
   faHome,
@@ -16,12 +15,12 @@ import { Switch } from "../../atoms/Switch/Switch";
 export const Sidebar = () => (
   <div className="sidebar">
     <SidebarLink  icon={faHome} href="/" />
-    <SidebarLink  icon={faIdCard} href="#" />
-    <SidebarLink  icon={faUserFriends} href="#" />
-    <SidebarLink  icon={faEnvelope} href="#" />
-    <SidebarLink  icon={faPlay} href="#" />
+    <SidebarLink  icon={faIdCard} href="/a" />
+    <SidebarLink  icon={faUserFriends} href="/b" />
+    <SidebarLink  icon={faEnvelope} href="/c" />
+    <SidebarLink  icon={faPlay} href="/d" />
     <SidebarLink  icon={faThList} href="/filmList" />
-    <SidebarLink  icon={faCog} href="#" />
+    <SidebarLink  icon={faCog} href="/e" />
     <div className="switch-block">
     <Switch />
     </div>

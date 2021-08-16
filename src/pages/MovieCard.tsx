@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { films } from "../mock";
 import { FilmCard } from "../components/molecules/FilmCard";
 import { Header } from '../components/molecules/Header';

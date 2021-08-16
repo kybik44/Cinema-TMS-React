@@ -118,4 +118,5 @@ main {
 .small-card-list{
   display: flex;
   flex-wrap: wrap;
+  align-items: stretch;
 }
