@@ -7,7 +7,6 @@ import { Raiting } from "../../atoms/Raiting";
 import { Title } from "../../atoms/Title";
 import { Plot } from "../../atoms/Plot";
 
-
 export const FilmCard = ({
   year,
   poster,
@@ -29,13 +28,17 @@ export const FilmCard = ({
     <div className="film-info">
       <div className="film-intro">
         <div className="film-intro-info">
+          <Poster
+            src={poster}
+            width="225px"
+            height="340px"
+            isSmallCard={false}
+          />
 
-            <Poster src={poster} width="225px" height="340px" isSmallCard={false}/>
-         
           <Raiting imdbVotes={imdbVotes} imdbRating={imdbRating} />
         </div>
         <div className="film-description">
-          <Title title={title} isSmallCard={false}/>
+          <Title title={title} isSmallCard={false} />
           <FilmDescriptionList
             year={year}
             poster={poster}
@@ -51,7 +54,7 @@ export const FilmCard = ({
           />
         </div>
       </div>
-     <Plot text={plot} isSmallCard={false} />
+      <Plot text={plot} isSmallCard={false} />
     </div>
   </div>
 );

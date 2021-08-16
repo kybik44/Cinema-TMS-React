@@ -2,7 +2,8 @@
     margin-bottom: 20px;
     text-align: left;
 }
-.film-description__item:last-child{
+
+.film-description__item:last-child {
     margin-bottom: 0;
 }
 
@@ -11,5 +12,3 @@
     min-width: 100px;
     margin-right: 27px;
 }
-
-.item-value {}

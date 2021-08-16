@@ -3,32 +3,31 @@ import "./index.css";
 import { DescriptionListItem } from "../../atoms/DescriptionListItem";
 
 interface IFilmDescriptionList {
-    year: number,
-    released: string | number,
-    runtime: string,
-    genre: string[],
-    director: string,
-    writer: string,
-    actors: string[],
-    country: string,
-    poster: string,
-    boxOffice: string,
-    production: string,
-    
-  }
+  year: number;
+  released: string | number;
+  runtime: string;
+  genre: string[];
+  director: string;
+  writer: string;
+  actors: string[];
+  country: string;
+  poster: string;
+  boxOffice: string;
+  production: string;
+}
 export const FilmDescriptionList = ({
-    year,
-    released,
-    runtime,
-    boxOffice,
-    genre,
-    country,
-    production,
-    writer,
-    director,
-    actors,
-  }: IFilmDescriptionList) => (
-    <div className="film-description-column">
+  year,
+  released,
+  runtime,
+  boxOffice,
+  genre,
+  country,
+  production,
+  writer,
+  director,
+  actors,
+}: IFilmDescriptionList) => (
+  <div className="film-description-column">
     <ul className="film-description-list">
       <DescriptionListItem name="Year" value={year} />
       <DescriptionListItem name="Released" value={released} />
@@ -42,4 +41,4 @@ export const FilmDescriptionList = ({
       <DescriptionListItem name="Actors" value={actors.join(", ")} />
     </ul>
   </div>
-)
+);

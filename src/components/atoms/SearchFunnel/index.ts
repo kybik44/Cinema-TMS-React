@@ -1,1 +1,1 @@
-export {SearchFunnel} from "./SearchFunnel"
+export { SearchFunnel } from "./SearchFunnel";

@@ -1,1 +1,1 @@
-export {ProfileLine} from "./ProfileLine"
+export { ProfileLine } from "./ProfileLine";

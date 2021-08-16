@@ -7,10 +7,10 @@ interface ISidebarLink {
   href: string;
 }
 
-export const SidebarLink = ({ icon, href }: ISidebarLink) => { 
+export const SidebarLink = ({ icon, href }: ISidebarLink) => {
   return (
-      <NavLink className="sidebar-link" to={href} exact>
-        <FontAwesomeIcon className="icon" icon={icon} />
-      </NavLink>
+    <NavLink className="sidebar-link" to={href} exact>
+      <FontAwesomeIcon className="icon" icon={icon} />
+    </NavLink>
   );
 };

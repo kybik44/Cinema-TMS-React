@@ -16,14 +16,14 @@ export const ProfileLine = ({ name }: IProfileLine) => (
     </span>
 
     <div className="dropdown">
-    <button className="dropbtn"> 
-    <FontAwesomeIcon className="icon" icon={faAngleDown} />
-    </button>
-    <div className="dropdown-content">
-      <a href="#">Profile</a>
-      <a href="#">Settings</a>
-      <a href="#">Sign out</a>
+      <button className="dropbtn">
+        <FontAwesomeIcon className="icon" icon={faAngleDown} />
+      </button>
+      <div className="dropdown-content">
+        <a href="#">Profile</a>
+        <a href="#">Settings</a>
+        <a href="#">Sign out</a>
+      </div>
     </div>
-  </div>
   </div>
 );

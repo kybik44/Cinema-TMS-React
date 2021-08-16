@@ -1,1 +1,1 @@
-export {SmallFilmCard} from "./SmallFilmCard"
+export { SmallFilmCard } from "./SmallFilmCard";

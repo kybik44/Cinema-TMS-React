@@ -10,6 +10,12 @@ interface IPoster {
 
 export const Poster = ({ src, width, height, isSmallCard }: IPoster) => (
   <div className="img-container">
-    <img src={src} alt="Poster" width={width} height={height} className={isSmallCard ? "small-img" : "big-img"}/>
-    </div>
+    <img
+      src={src}
+      alt="Poster"
+      width={width}
+      height={height}
+      className={isSmallCard ? "small-img" : "big-img"}
+    />
+  </div>
 );

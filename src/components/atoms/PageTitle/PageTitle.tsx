@@ -6,5 +6,5 @@ interface IPageTitle {
 }
 
 export const PageTitle = ({ title }: IPageTitle) => (
-    <h2 className="page-title">{title}</h2>
+  <h2 className="page-title">{title}</h2>
 );

@@ -102,7 +102,7 @@ button:focus {
 }
 
 /*--------------------*/
-.App{
+.App {
   text-align: center;
   background: #EFF3F9;
   width: 100%;
@@ -115,7 +115,8 @@ main {
   padding-bottom: 120px;
   width: 90%;
 }
-.small-card-list{
+
+.small-card-list {
   display: flex;
   flex-wrap: wrap;
   align-items: stretch;

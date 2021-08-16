@@ -1,7 +1,6 @@
 import * as React from "react";
 import "./index.css";
 
-
 interface IDescriptionListItem {
   name: string;
   value: string | number;
