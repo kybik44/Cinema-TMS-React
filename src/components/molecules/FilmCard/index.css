@@ -1,0 +1,59 @@
+.text {
+    font-family: Alata;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    color: #3A236A;
+}
+
+.film-card {
+    display: flex;
+    justify-content: flex-start;
+    padding: 29px 43px 140px 29px;
+    background: #FDFDFF;
+    border: 1px solid #EBEBEB;
+    border-radius: 13px;
+    max-width: 798px;
+
+}
+
+.film-info {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.film-intro {
+    display: flex;
+    margin-bottom: 42px;
+}
+
+.film-description__item {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.film-intro-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-right: 35px;
+}
+
+.film-poster {
+    margin-bottom: 33px;
+}
+
+.film-title {
+    font-size: 24px;
+    line-height: 33px;
+    color: #7F7FD5;
+    align-self: flex-start;
+    margin-bottom: 32px;
+}
+
+.film-description {
+    display: flex;
+    flex-direction: column;
+}

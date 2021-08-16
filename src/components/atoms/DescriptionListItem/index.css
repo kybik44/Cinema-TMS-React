@@ -1,0 +1,14 @@
+.film-description__item {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.film-description__item:last-child {
+    margin-bottom: 0;
+}
+
+.item-name {
+    color: #979797;
+    min-width: 100px;
+    margin-right: 27px;
+}

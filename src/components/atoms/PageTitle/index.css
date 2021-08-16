@@ -1,0 +1,19 @@
+.film-title {
+    font-size: 24px;
+    line-height: 33px;
+    color: #7F7FD5;
+    align-self: flex-start;
+    margin-bottom: 32px;
+}
+.page-title {
+    font-family: "Alata";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 41px;
+    display: flex;
+    align-items: center;
+    color: #4f4f4f;
+    justify-content: flex-start;
+    margin-right: 48px;
+  }

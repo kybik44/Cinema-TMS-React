@@ -1,0 +1,11 @@
+.title-line{
+    margin-bottom: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title-line-right, .title-line-left{
+    display: flex;
+    align-items:center;
+}

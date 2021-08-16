@@ -1,0 +1,33 @@
+.search {
+  position: relative;
+}
+
+.search-input {
+  margin-right: 20px;
+  padding-left: 40px;
+  width: 150px;
+  height: 32px;
+  border-radius: 7px;
+  outline: none;
+  border: none;
+}
+
+.search-input::placeholder {
+  font-family: Alata;
+  font-size: 12px;
+  line-height: 17px;
+  color: #979797;
+}
+
+.search-icon {
+  background: none;
+  outline: none;
+  cursor: pointer;
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+.search-icon>img {
+  width: 15px;
+}

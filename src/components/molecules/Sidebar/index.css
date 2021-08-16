@@ -1,0 +1,45 @@
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 100px;
+  background-color: #FDFDFF;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Содержание страницы. Значение свойства margin-left должно соответствовать значению свойства width боковой панели */
+div.content {
+  margin-left: 100px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+/* На экранах шириной менее 700 пикселей превратить боковую панель в верхнюю панель */
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  div.content {
+    margin-left: 0;
+  }
+}
+
+.sidebar img {
+  width: 20px;
+  height: 20px;
+}
+
+.switch-block {
+  position: absolute;
+  bottom: 25px;
+  left: 20px;
+}
