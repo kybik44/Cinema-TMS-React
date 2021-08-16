@@ -18,3 +18,7 @@ export interface IFilm {
     production: string,
 }
 
+export interface ITrailer {
+    trailer: string;
+    description: string;
+}

@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import { Header } from "../components/molecules/Header";
-import { SmallFilmCard } from "../components/SmallFilmCard";
+import { SmallFilmCard } from "../components/molecules/SmallFilmCard";
 import { films } from "../mock";
 
 export const FilmListPage = () => {

@@ -1,7 +1,7 @@
-import { Title } from "../atoms/Title";
-import { Poster } from "../atoms/Poster";
+import { Title } from "../../atoms/Title";
+import { Poster } from "../../atoms/Poster";
 import "./index.css";
-import { Plot } from "../atoms/Plot";
+import { Plot } from "../../atoms/Plot";
 import { NavLink } from "react-router-dom";
 
 interface ISmallFilmCard {
@@ -21,7 +21,7 @@ export const SmallFilmCard = ({
     <div className={"small-film-card"}>
       <div className={"small-film-card-content"}>
         <Poster src={poster} width="130px" height="200px" isSmallCard={true} />
-        <Title title={title} isSmallCard={true} />
+        <Title title={title} className="small-card-title title" />
         <p className="film-year">{year}</p>
         <Plot text={plot} isSmallCard={true} />
       </div>

@@ -38,7 +38,7 @@ export const FilmCard = ({
           <Raiting imdbVotes={imdbVotes} imdbRating={imdbRating} />
         </div>
         <div className="film-description">
-          <Title title={title} isSmallCard={false} />
+          <Title title={title} className="big-card-title title" />
           <FilmDescriptionList
             year={year}
             poster={poster}

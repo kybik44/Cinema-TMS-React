@@ -1,4 +1,4 @@
-import { IFilm } from "../types";
+import { IFilm, ITrailer } from "../types";
 
 export const films: IFilm[] = [
   {
@@ -103,3 +103,31 @@ export const films: IFilm[] = [
     production: "1492 Pictures, Heyday Films, Warner Brothers",
   },
 ];
+
+export const trailers: ITrailer[] = [
+  {
+    trailer: "https://youtu.be/ybji16u608U",
+    description: "In Marvel Studios’ action-packed spy thriller “Black Widow,” Natasha Romanoff aka Black Widow confronts the darker parts of her ledger when a dangerous conspiracy with ties to her past arises. Pursued by a force that will stop at nothing to bring her down, Natasha must deal with her history as a spy and the broken relationships left in her wake long before she became an Avenger.",
+  },
+    {
+		trailer: "https://www.youtube.com/embed/5NYt1qirBWg",
+    description: "Harry Potter and the Deathly Hallows -- Part 2, is the final adventure in the Harry Potter film series. The much-anticipated motion picture event is the second of two full-length parts. In the epic finale, the battle between the good and evil forces of the wizarding world escalates into an all-out war.  The stakes have never been higher and no one is safe.  But it is Harry Potter who may be called upon to make the ultimate sacrifice as he draws closer to the climactic showdown with Lord Voldemort. It all ends here.",
+},
+  {
+    trailer: "https://youtu.be/1g3_CFmnU7k",
+    description: "The Imperial Forces, under orders from cruel Darth Vader, hold Princess Leia hostage in their efforts to quell the rebellion against the Galactic Empire. Luke Skywalker and Han Solo, captain of the Millennium Falcon, work together with the companionable droid duo R2-D2 and C-3PO to rescue the beautiful princess, help the Rebel Alliance and restore freedom and justice to the Galaxy.",
+  },
+  {
+    trailer: "https://youtu.be/tAiy66Xrsz4",
+    description: "As Harry Potter begins his 6th year at Hogwarts School of Witchcraft and Wizardry, he discovers an old book marked mysteriously This book is the property of the Half-Blood Prince and begins to learn more about Lord Voldemort's dark past.",
+  },
+  {
+    trailer: "Harry Potter and the Sorcerer's Stone",
+    description: "",
+  },
+  {
+    trailer: "https://youtu.be/VyHV0BRtdxo",
+    description: "This is the tale of Harry Potter (Daniel Radcliffe), an ordinary eleven-year-old boy serving as a sort of slave for his aunt and uncle who learns that he is actually a wizard and has been invited to attend the Hogwarts School for Witchcraft and Wizardry. Harry is snatched away from his mundane existence by Rubeus Hagrid (Robbie Coltrane), the groundskeeper for Hogwarts, and quickly thrown into a world completely foreign to both him and the viewer. Famous for an incident that happened at his birth, Harry makes friends easily at his new school. He soon finds, however, that the wizarding world is far more dangerous for him than he would have imagined, and he quickly learns that not all wizards are ones to be trusted.",
+  }
+
+]
