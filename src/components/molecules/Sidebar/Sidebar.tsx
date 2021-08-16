@@ -11,8 +11,11 @@ import {
   faCog,
 } from "@fortawesome/free-solid-svg-icons";
 import { Switch } from "../../atoms/Switch/Switch";
-
-export const Sidebar = () => (
+interface ISidebar {
+  switchStatus: boolean;
+  onChangeSwitchStatus: any;
+}
+export const Sidebar = ({ switchStatus, onChangeSwitchStatus }: ISidebar) => (
   <div className="sidebar">
     <SidebarLink icon={faHome} href="/" />
     <SidebarLink icon={faIdCard} href="/a" />
@@ -22,7 +25,10 @@ export const Sidebar = () => (
     <SidebarLink icon={faThList} href="/filmList" />
     <SidebarLink icon={faCog} href="/e" />
     <div className="switch-block">
-      <Switch />
+      <Switch
+        switchStatus={switchStatus}
+        onChangeSwitchStatus={onChangeSwitchStatus}
+      />
     </div>
   </div>
 );

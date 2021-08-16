@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 
@@ -9,10 +9,21 @@ import { MovieCard } from "./pages/MovieCard";
 import { ErrorPage } from "./pages/ErrorPage";
 
 function App() {
+  const [switchChecked, setSwitchChecked] = useState(false);
+  const handlerTheme = (checked: boolean) => {
+    setSwitchChecked(!checked);
+  };
+  const cls = ["App"];
+  if (switchChecked) {
+    cls.push("dark-theme");
+  }
   return (
     <BrowserRouter>
-      <Sidebar />
-      <div className="App">
+      <Sidebar
+        switchStatus={switchChecked}
+        onChangeSwitchStatus={handlerTheme}
+      />
+      <div className={cls.join(" ")}>
         <main>
           <Switch>
             <Route path={"/"} exact component={MovieCard} />

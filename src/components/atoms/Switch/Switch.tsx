@@ -1,9 +1,17 @@
-import * as React from "react";
+import React, { useState } from "react";
 import "./index.css";
-
-export const Switch = () => (
-  <div className="toggle-btn" id="_1st-toggle-btn">
-    <input type="checkbox"></input>
-    <span></span>
-  </div>
-);
+interface ISwitch {
+  switchStatus: boolean;
+  onChangeSwitchStatus: any;
+}
+export const Switch = ({ switchStatus, onChangeSwitchStatus }: ISwitch) => {
+  return (
+    <div className="toggle-btn" id="_1st-toggle-btn">
+      <input
+        type="checkbox"
+        onChange={() => onChangeSwitchStatus(switchStatus)}
+      ></input>
+      <span></span>
+    </div>
+  );
+};

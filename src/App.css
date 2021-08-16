@@ -108,7 +108,9 @@ button:focus {
   width: 100%;
   min-height: 100vh;
 }
-
+.dark-theme{
+  background-color: rgb(141, 141, 141);
+}
 main {
   padding-left: 150px;
   padding-top: 50px;
