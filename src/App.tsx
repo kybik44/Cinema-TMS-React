@@ -9,6 +9,7 @@ import { MovieCard } from "./pages/MovieCard";
 import { ErrorPage } from "./pages/ErrorPage";
 
 function App() {
+
   const [switchChecked, setSwitchChecked] = useState(false);
   const handlerTheme = (checked: boolean) => {
     setSwitchChecked(!checked);
