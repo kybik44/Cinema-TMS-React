@@ -1,8 +1,10 @@
 import React, { Fragment, useState } from "react";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { Header } from "../components/molecules/Header";
 import { SmallFilmCard } from "../components/molecules/SmallFilmCard";
 import { films as movies } from "../mock";
 import { IFilm } from "../types";
+import { FilterPage } from "./FilterPage";
 
 export const FilmListPage = () => {
   const [films, setFilms] = useState(movies);
@@ -19,6 +21,7 @@ export const FilmListPage = () => {
   };
 
   return (
+
     <Fragment>
       <Header title="Movies" onInputSearch={handlerFilms} />
       <div className="small-card-list">
@@ -27,5 +30,6 @@ export const FilmListPage = () => {
         })}
       </div>
     </Fragment>
+
   );
 };

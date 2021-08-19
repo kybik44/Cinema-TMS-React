@@ -23,7 +23,7 @@ export const Sidebar = ({ switchStatus, onChangeSwitchStatus }: ISidebar) => (
     <SidebarLink icon={faEnvelope} href="/c" />
     <SidebarLink icon={faPlay} href="/d" />
     <SidebarLink icon={faThList} href="/filmList" />
-    <SidebarLink icon={faCog} href="/e" />
+    <SidebarLink icon={faCog} href="/filterPage" />
     <div className="switch-block">
       <Switch
         switchStatus={switchStatus}

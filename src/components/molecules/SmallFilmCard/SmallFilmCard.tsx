@@ -2,7 +2,6 @@ import { Title } from "../../atoms/Title";
 import { Poster } from "../../atoms/Poster";
 import "./index.css";
 import { Plot } from "../../atoms/Plot";
-import { NavLink } from "react-router-dom";
 
 interface ISmallFilmCard {
   poster: string;

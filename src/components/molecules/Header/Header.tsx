@@ -8,6 +8,7 @@ import { ProfileLine } from "../ProfileLine";
 interface IHeader {
   title: string;
   onInputSearch?: any;
+  href?: string;
 }
 export const Header = ({ title, onInputSearch }: IHeader) => (
   <div className="title-line">

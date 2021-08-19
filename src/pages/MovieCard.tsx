@@ -8,7 +8,7 @@ import { RaitingCard } from "../components/molecules/RaitingCard";
 
 export const MovieCard = () => {
   const selectedFilm = films[2]
-  const selectedTrailer = trailers[1]
+  const selectedTrailer = trailers[2]
   return (
     <Fragment>
       <Header title="Movie" />

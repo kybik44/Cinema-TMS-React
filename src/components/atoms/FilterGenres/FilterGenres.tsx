@@ -1,37 +1,59 @@
 import * as React from "react";
 import { SubTitle } from "../SubTitle";
 import "./index.css";
-import ReactDOM from "react-dom";
 import { useState } from "react";
 import { FilterGenresTag } from "../FilterGenresTag";
+import { Genre } from "../Genre";
 
 export const FilterGenres = () => {
-  const genresArray = ["Adventure", "Fantasy", "Drama"];
-  const [btnClick, setBtnClick] = useState(false);
-
+  
+  const [dropButtonClicked, setDropDownStatus] = useState(false);
+  const handleDropDownStatus = () => {
+    setDropDownStatus(!dropButtonClicked)
+  }
+  const genresArray = ["Adventure", "Fantasy", "Drama"]
+  const [currentGenresArray, setCurrentGenresArray] = useState(genresArray)
+  const [crossClicked, setCrossClicked] = useState(false)
+  const handleCrossClick = (tagValue:string) => {
+    setCrossClicked(!crossClicked)
+    deleteTag(tagValue)
+  }
+  const deleteTag = (tagValue:string) => {
+      if(genresArray.includes(tagValue)){
+        return setCurrentGenresArray(currentGenresArray.filter(genre => !(genre === tagValue)))
+      }
+  }
+  let dropContentClass = "dropdown-content"
+  if(dropButtonClicked) dropContentClass += " active"
+  const handlerGenre = (targetGenre:string) => {
+    if(!currentGenresArray.includes(targetGenre)){
+        setCurrentGenresArray([...currentGenresArray, targetGenre])
+    }
+    
+  }
   return (
     <div className="filter-genres">
       <SubTitle subtitle="Genres" />
       <div className="filter-genres-tags">
         <ul className="primary_tags">
-          {genresArray.map((genre, index) => {
-            return <FilterGenresTag key={index} genre={genre}/>;
+          {currentGenresArray.map((genre, index) => {
+            return <FilterGenresTag key={index} genre={genre} onClickCross={handleCrossClick}/>;
           })}
         </ul>
         <div className="dropdown-genres">
           <button
             className="dropbtn"
-            onClick={() => {setBtnClick(!btnClick)}}
+            onClick={handleDropDownStatus}
           >
             add
           </button>
           <div
-            className={ btnClick ? "dropdown-content active" : "dropdown-content" }
-            onMouseLeave={() => {setBtnClick(!btnClick)}}
+            className={dropContentClass}
+            onMouseLeave={handleDropDownStatus}
           >
-            <a href="#">Fantasy</a>
-            <a href="#">Drama</a>
-            <a href="#">Adventure</a>
+              {genresArray.map((genre, index) => {
+            return <Genre key={index} genre={genre} onSelectGenre={handlerGenre}/>;
+          })}
           </div>
         </div>
       </div>

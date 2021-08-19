@@ -7,6 +7,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { FilmListPage } from "./pages/FilmListPage";
 import { MovieCard } from "./pages/MovieCard";
 import { ErrorPage } from "./pages/ErrorPage";
+import { FilterPage } from "./pages/FilterPage";
 
 function App() {
 
@@ -29,6 +30,7 @@ function App() {
           <Switch>
             <Route path={"/"} exact component={MovieCard} />
             <Route path={"/filmList"} component={FilmListPage} />
+            <Route path={"/filterPage"} component={FilterPage} />
             <Route component={ErrorPage} />
           </Switch>
         </main>
