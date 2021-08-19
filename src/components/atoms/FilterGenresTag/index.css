@@ -1,0 +1,19 @@
+.hide{
+    display: none;
+}
+.tag {
+    padding: 3px 4px;
+    min-width: 60px;
+ background: #7F7FD5;
+ box-sizing: border-box;
+ border-radius: 5px;
+ font-family: Alata;
+ font-size: 10px;
+ line-height: 14px;
+ display: flex;
+ margin-right: 8px;
+ color: #FDFDFF;
+ }
+ .hide{
+     display: none;
+ }

@@ -1,0 +1,13 @@
+.subtitle{
+    font-family: Alata;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 25px;
+display: flex;
+margin-bottom: 5px;
+
+/* text|light */
+
+color: #979797;
+}

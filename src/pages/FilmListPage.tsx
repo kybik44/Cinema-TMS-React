@@ -13,13 +13,14 @@ export const FilmListPage = () => {
   };
 
   const handlerFilms = (searchString: string) => {
-    console.log("Работает");
-    setFilms(searchFilm(movies, searchString));
+    if (searchString.length >= 2) {
+      setFilms(searchFilm(movies, searchString));
+    }
   };
 
   return (
     <Fragment>
-      <Header title="Movies" onClickSearchButton={handlerFilms} />
+      <Header title="Movies" onInputSearch={handlerFilms} />
       <div className="small-card-list">
         {films.map((film) => {
           return <SmallFilmCard key={film.id} {...film} />;

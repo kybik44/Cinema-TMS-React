@@ -1,0 +1,1 @@
+export { FilterGenresTag } from "./FilterGenresTag"

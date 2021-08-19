@@ -3,12 +3,14 @@ import "./index.css";
 import searchIcon from "../../../public/images/search-icon.svg";
 import { useState } from "react";
 interface ISearchLine {
-  onClickSearchButton: any;
+  onInputSearch: any;
 }
-export const SearchLine = ({ onClickSearchButton }: ISearchLine) => {
+export const SearchLine = ({ onInputSearch }: ISearchLine) => {
   const [stringValue, setStringValue] = useState("");
-  
-  console.log(`current: ${stringValue}`);
+  const handlerSearch = (targetValue: any) => {
+    setStringValue(targetValue);
+    onInputSearch(stringValue);
+  };
   return (
     <div className="search">
       <input
@@ -16,12 +18,11 @@ export const SearchLine = ({ onClickSearchButton }: ISearchLine) => {
         type="search"
         placeholder="Search"
         value={stringValue}
-        onInput={(e: any) => setStringValue(e.target.value)}
+        onInput={(e: any) => {
+          handlerSearch(e.target.value);
+        }}
       />
-      <button
-        className="search-icon"
-        onClick={() => onClickSearchButton(stringValue)}
-      >
+      <button className="search-icon">
         <img src={searchIcon} alt="Search icon" />
       </button>
     </div>
