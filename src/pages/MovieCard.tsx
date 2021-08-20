@@ -6,14 +6,19 @@ import { Header } from "../components/molecules/Header";
 import { TrailerCard } from "../components/molecules/TrailerCard";
 import { RaitingCard } from "../components/molecules/RaitingCard";
 import { IFilm } from "../types";
+import { useParams } from "react-router-dom";
 
-export const MovieCard = ({id}:any) => {
-  
+export const MovieCard = () => {
+  const {id}:any = useParams();
+
+  const selectedFilm = films[id-1]
+  const selectedTrailer = trailers[id-1]
+  console.log(selectedFilm)
   return (
     <Fragment>
       <Header title="Movie" />
-      <FilmCard {...films[id]} />
-      <TrailerCard {...trailers[id]} {...films[id]}/>
+      <FilmCard {...selectedFilm} />
+      <TrailerCard {...selectedTrailer} {...selectedFilm}/>
       <RaitingCard raiting="2"/>
     </Fragment>
   );

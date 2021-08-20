@@ -18,7 +18,7 @@ export const SearchLine = ({ onInputSearch }: ISearchLine) => {
         type="search"
         placeholder="Search"
         value={stringValue}
-        onInput={(e: any) => {
+        onChange={(e: any) => {
           handlerSearch(e.target.value);
         }}
       />

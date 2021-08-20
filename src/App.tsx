@@ -2,13 +2,11 @@ import React, { useState } from "react";
 import "./App.css";
 
 import { Sidebar } from "./components/molecules/Sidebar";
-import { BrowserRouter, Route, Switch, useParams } from "react-router-dom";
+import { BrowserRouter, Link, Route, Switch, useParams } from "react-router-dom";
 import { FilmListPage } from "./pages/FilmListPage";
 import { MovieCard } from "./pages/MovieCard";
 import { ErrorPage } from "./pages/ErrorPage";
 import { FilterPage } from "./pages/FilterPage";
-import { films } from "./mock";
-import { IFilm } from "./types";
 
 function App() {
   const [switchChecked, setSwitchChecked] = useState(false);
@@ -27,9 +25,13 @@ function App() {
         onChangeSwitchStatus={handlerTheme}
       />
       <div className={cls.join(" ")}>
+      <div>
+
+
+</div>
         <main>
           <Switch>
-            <Route path={`/movieCard`} exact component={MovieCard} />
+            <Route path={"/filmList/:id"} exact component={MovieCard}/>
             <Route path={"/filmList"} component={FilmListPage} />
             <Route path={"/filterPage"} component={FilterPage} />
             <Route component={ErrorPage} />

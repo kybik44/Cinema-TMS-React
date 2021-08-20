@@ -9,13 +9,14 @@ import { FilterGenres } from "../../atoms/FilterGenres";
 
 interface IFilterCard {
   onInputSearch?: any;
+  onClickFilterButton?: any
 }
-export const FilterCard = ({ onInputSearch }: IFilterCard) => (
+export const FilterCard = ({ onInputSearch, onClickFilterButton }: IFilterCard) => (
   <div className="filter-card">
     <Title className="filter-title title" title="Sort by:" />
     <div className="sort-buttons-container">
-      <SortButton title="Raiting" />
-      <SortButton title="Year" />
+      <SortButton title="Raiting" onClickFilterButton={onClickFilterButton}/>
+      <SortButton title="Year" onClickFilterButton={onClickFilterButton}/>
     </div>
     <Title className="filter-title title" title="Filter:" />
     <div className="filter-container">
