@@ -17,13 +17,13 @@ interface ISidebar {
 }
 export const Sidebar = ({ switchStatus, onChangeSwitchStatus }: ISidebar) => (
   <div className="sidebar">
-    <SidebarLink icon={faHome} href="/" />
+    <SidebarLink icon={faHome} href="/movieCard" />
     <SidebarLink icon={faIdCard} href="/a" />
     <SidebarLink icon={faUserFriends} href="/b" />
     <SidebarLink icon={faEnvelope} href="/c" />
     <SidebarLink icon={faPlay} href="/d" />
     <SidebarLink icon={faThList} href="/filmList" />
-    <SidebarLink icon={faCog} href="/filterPage" />
+    <SidebarLink icon={faCog} href="/n" />
     <div className="switch-block">
       <Switch
         switchStatus={switchStatus}

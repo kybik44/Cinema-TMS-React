@@ -1,19 +1,19 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import { films } from "../mock";
 import { trailers } from "../mock"
 import { FilmCard } from "../components/molecules/FilmCard";
 import { Header } from "../components/molecules/Header";
 import { TrailerCard } from "../components/molecules/TrailerCard";
 import { RaitingCard } from "../components/molecules/RaitingCard";
+import { IFilm } from "../types";
 
-export const MovieCard = () => {
-  const selectedFilm = films[2]
-  const selectedTrailer = trailers[2]
+export const MovieCard = ({id}:any) => {
+  
   return (
     <Fragment>
       <Header title="Movie" />
-      <FilmCard {...selectedFilm} />
-      <TrailerCard {...selectedTrailer} {...selectedFilm}/>
+      <FilmCard {...films[id]} />
+      <TrailerCard {...trailers[id]} {...films[id]}/>
       <RaitingCard raiting="2"/>
     </Fragment>
   );

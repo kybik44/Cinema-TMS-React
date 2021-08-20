@@ -1,0 +1,1 @@
+export {Testik} from "./Testik"
