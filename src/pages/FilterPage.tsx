@@ -15,25 +15,34 @@ export const FilterPage = () => {
         film.plot.toLowerCase().includes(searchString.toLowerCase())
     );
   };
-  const filterFilmsByRaiting = (filmsArray: IFilm[]) => {
-    return filmsArray.sort((a, b) => a.imdbRating - b.imdbRating);
-  };
+
   const handlerSearchFilms = (searchString: string) => {
     if (searchString.length >= 2) {
       setFilms(searchFilmByTitlePlot(movies, searchString));
     }
   };
+
   const sortSettings = [
     { field: "raiting", fieldName: "Rating", active: false },
     { field: "year", fieldName: "Year", active: false },
   ];
-  const [btnClicked, setBtnClicked] = useState(false);
-  const handlerFilterButton = (status: any) => {
-    setBtnClicked(!btnClicked);
-    if (status) {
-      setFilms(filterFilmsByRaiting(movies));
+
+  const filterFilmsByRaiting = (filmsArray: IFilm[]) => {
+    return filmsArray.sort((a, b) => a.imdbRating - b.imdbRating);
+  };
+  const handlerFilterButton = (field: string, isActive: boolean) => {
+    if (field === "raiting") {
+      sortSettings[0].active = isActive;
+      console.log(films, movies);
+      if (sortSettings[0].active) {
+        setFilms(filterFilmsByRaiting(movies));
+      }
+    }
+    if (field === "year") {
+      console.log("year");
     }
   };
+  console.log(films, movies);
   return (
     <BrowserRouter>
       <Fragment>
@@ -41,6 +50,7 @@ export const FilterPage = () => {
         <FilterCard
           onInputSearch={handlerSearchFilms}
           onClickFilterButton={handlerFilterButton}
+          sortSettings={sortSettings}
         />
         <div className="small-card-list">
           {films.map((film) => {

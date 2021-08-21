@@ -1,5 +1,4 @@
 import * as React from "react";
-import { SubTitle } from "../SubTitle";
 import "./index.css";
 
 interface IGenre {

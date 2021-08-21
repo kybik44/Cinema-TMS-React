@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 
 import { Sidebar } from "./components/molecules/Sidebar";
-import { BrowserRouter, Link, Route, Switch, useParams } from "react-router-dom";
+import { BrowserRouter, Route, Switch} from "react-router-dom";
 import { FilmListPage } from "./pages/FilmListPage";
 import { MovieCard } from "./pages/MovieCard";
 import { ErrorPage } from "./pages/ErrorPage";

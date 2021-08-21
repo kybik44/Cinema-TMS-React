@@ -6,17 +6,19 @@ import { SortButton } from "../../atoms/SortButton";
 import { CountrySelect } from "../../atoms/CountrySelect";
 import { FilterTitlePlot } from "../../atoms/FilterTitlePlot";
 import { FilterGenres } from "../../atoms/FilterGenres";
+import { ISortSettings } from "../../../types";
 
 interface IFilterCard {
   onInputSearch?: any;
-  onClickFilterButton?: any
+  onClickFilterButton?: any;
+  sortSettings: ISortSettings[];
 }
-export const FilterCard = ({ onInputSearch, onClickFilterButton }: IFilterCard) => (
+export const FilterCard = ({ onInputSearch, onClickFilterButton, sortSettings}: IFilterCard) => (
   <div className="filter-card">
     <Title className="filter-title title" title="Sort by:" />
     <div className="sort-buttons-container">
-      <SortButton title="Raiting" onClickFilterButton={onClickFilterButton}/>
-      <SortButton title="Year" onClickFilterButton={onClickFilterButton}/>
+      <SortButton  onClickFilterButton={onClickFilterButton} sortSettings={sortSettings[0]}/>
+      <SortButton  onClickFilterButton={onClickFilterButton} sortSettings={sortSettings[1]}/>
     </div>
     <Title className="filter-title title" title="Filter:" />
     <div className="filter-container">

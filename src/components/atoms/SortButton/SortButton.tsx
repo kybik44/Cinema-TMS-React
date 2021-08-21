@@ -1,15 +1,20 @@
 import * as React from "react";
+import { useState } from "react";
+import { ISortSettings } from "../../../types";
 import "./index.css";
 
 
 interface ISortButton {
-    title:String;
     onClickFilterButton: any;
+    sortSettings: ISortSettings;
 }
-export const SortButton = ({title,onClickFilterButton}:ISortButton) => {
-  
-  const [isClicked, setClicked] = React.useState(true);
+export const SortButton = ({onClickFilterButton, sortSettings}:ISortButton) => {
+  const [btnClicked, setBtnClicked] = useState(true)
+  const handlerFilterButton = (field:string, isClicked:boolean) => {
+    setBtnClicked(!btnClicked)
+    onClickFilterButton(field, isClicked);
+  }
   return (    
-    <button className={isClicked ? "sort-button" : "sort-button active"} onClick={onClickFilterButton}>{title}</button>
+    <button className={sortSettings.active ? "sort-button active" : "sort-button"} onClick={()=>{handlerFilterButton(sortSettings.field, btnClicked)}}>{sortSettings.fieldName}</button>
 )};
 
