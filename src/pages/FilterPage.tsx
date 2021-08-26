@@ -1,12 +1,14 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import { films as movies } from "../mock";
 import { Header } from "../components/molecules/Header";
 import { FilterCard } from "../components/molecules/FilterCard";
 import { BrowserRouter } from "react-router-dom";
 import { SmallFilmCard } from "../components/molecules/SmallFilmCard";
 import { IFilm } from "../types";
+import { searchFilm } from "./FilmListPage";
 
 export const FilterPage = () => {
+  
   const [films, setFilms] = useState(movies);
   const searchFilmByTitlePlot = (filmsArray: IFilm[], searchString: string) => {
     return filmsArray.filter(
@@ -20,33 +22,55 @@ export const FilterPage = () => {
     if (searchString.length >= 2) {
       setFilms(searchFilmByTitlePlot(movies, searchString));
     }
+    if(!searchString.length){
+      console.log(movies)
+      console.log(searchString)
+      setFilms(movies)
+    }
   };
 
-  const sortSettings = [
-    { field: "raiting", fieldName: "Rating", active: false },
-    { field: "year", fieldName: "Year", active: false },
+  const sortSettingsArray = [
+    { field: "raiting", fieldName: "Rating", active: true },
+    { field: "year", fieldName: "Year", active: true },
   ];
-
-  const filterFilmsByRaiting = (filmsArray: IFilm[]) => {
-    return filmsArray.sort((a, b) => a.imdbRating - b.imdbRating);
+  const [searchString, setSearchString] = useState('');
+  const handlerFilms = (searchString: string) => {
+    setSearchString(searchString)
+    if (searchString.length >= 3) {
+      setFilms(searchFilm(movies, searchString));
+    }
+    if (!searchString.length) {
+      setFilms(movies);
+    }
+  };
+  const [sortSettings, setSortSettings] = useState(sortSettingsArray);
+  const filterFilmsByField = (filmsArray: IFilm[], field: string) => {
+    return [...filmsArray].sort((a: any, b: any) => a[field] - b[field]);
   };
   const handlerFilterButton = (field: string, isActive: boolean) => {
+    setSortSettings((sortSettings) =>
+      sortSettings.map((el) =>
+        el.field === field ? { ...el, active: isActive } : el
+      )
+    );
+    
     if (field === "raiting") {
-      sortSettings[0].active = isActive;
-      console.log(films, movies);
       if (sortSettings[0].active) {
-        setFilms(filterFilmsByRaiting(movies));
-      }
+        setFilms(filterFilmsByField(movies, "imdbRating"));
+      }else{setFilms(movies) }
+
     }
     if (field === "year") {
-      console.log("year");
+      if (sortSettings[1].active) {
+        setFilms(filterFilmsByField(movies, "year"));
+      }else{setFilms(movies) }
     }
   };
-  console.log(films, movies);
+  
   return (
     <BrowserRouter>
       <Fragment>
-        <Header title="Filter and sort" href="/filterPage" />
+        <Header value = {searchString} title="Filter and sort" href="/filterPage" onInputSearch={handlerFilms}/>
         <FilterCard
           onInputSearch={handlerSearchFilms}
           onClickFilterButton={handlerFilterButton}

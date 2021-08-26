@@ -7,14 +7,15 @@ import { ProfileLine } from "../ProfileLine";
 
 interface IHeader {
   title: string;
-  onInputSearch?: any;
+  onInputSearch: (searchString:string) => void;
   href?: string;
+  value?: string
 }
-export const Header = ({ title, onInputSearch }: IHeader) => (
+export const Header = ({ title, onInputSearch, value }: IHeader) => (
   <div className="title-line">
     <div className="title-line-right">
       <PageTitle title={title} />
-      <SearchLine onInputSearch={onInputSearch}/>
+      <SearchLine value={value} onInputSearch={onInputSearch}/>
       <SearchFunnel />
     </div>
     <div className="title-line-left">

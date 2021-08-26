@@ -6,10 +6,8 @@ interface IFilterTitlePlot {
   onInputSearch: any;
 }
 export const FilterTitlePlot = ({ onInputSearch }: IFilterTitlePlot) => {
-  const [stringValue, setStringValue] = useState("");
-  const handlerSearch = (targetValue: any) => {
-    setStringValue(targetValue);
-    onInputSearch(stringValue);
+  const handlerSearch = (targetValue: any) => {  
+    onInputSearch(targetValue);
   };
   return (
     <div className="filter-title-plot">
@@ -18,7 +16,7 @@ export const FilterTitlePlot = ({ onInputSearch }: IFilterTitlePlot) => {
         type="text"
         id="title-plot"
         className="fliter-input big"
-        onInput={(e: any) => {
+        onChange={(e: any) => {
           handlerSearch(e.target.value);
         }}
       />

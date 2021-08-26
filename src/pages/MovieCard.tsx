@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import { films } from "../mock";
 import { trailers } from "../mock"
 import { FilmCard } from "../components/molecules/FilmCard";
@@ -9,14 +9,18 @@ import { useParams } from "react-router-dom";
 
 export const MovieCard = () => {
   const {id}:any = useParams();
+  const [searchString, setSearchString] = useState('')
 
   const selectedFilm = films[id-1]
   const selectedTrailer = trailers[id-1]
   console.log(selectedFilm)
+  const onInputSearch = () => {
+    setSearchString(searchString)
+  }
   return (
     <Fragment>
-      <Header title="Movie" />
-      <FilmCard {...selectedFilm} />
+      <Header onInputSearch={onInputSearch} title="Movie" />
+      <FilmCard  {...selectedFilm} />
       <TrailerCard {...selectedTrailer} {...selectedFilm}/>
       <RaitingCard raiting="2"/>
     </Fragment>

@@ -22,7 +22,7 @@ export const SmallFilmCard = ({
         <Poster src={poster} width="130px" height="200px" isSmallCard={true} />
         <Title title={title} className="small-card-title title" />
         <p className="film-year">{year}</p>
-        <Plot text={plot} isSmallCard={true} />
+        <Plot text={plot}  isSmallCard={true} />
       </div>
     </div>
   );

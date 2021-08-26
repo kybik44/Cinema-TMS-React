@@ -8,7 +8,13 @@
   margin-right: 25px;
 
 }
+.small-film-card:hover {
+  background: #dcdcfd;
 
+}
+.small-film-card:hover .small-film-text{
+  color: #000;
+}
 .small-film-card:nth-child(3n+3) {
   margin-right: 0;
 }
@@ -18,7 +24,9 @@
   text-align: left;
 }
 
-
+.small-card-title{
+  height: 56px
+}
 .film-year {
   margin-bottom: 20px;
   font: normal normal 20px/1.375 "Alata", sans-serif;

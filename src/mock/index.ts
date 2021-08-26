@@ -102,6 +102,26 @@ export const films: IFilm[] = [
     boxOffice: "$318,087,620",
     production: "1492 Pictures, Heyday Films, Warner Brothers",
   },
+  // {
+  //   id: 6,
+  //   title: "Katya Razumnik Biography",
+  //   year: 2021,
+  //   released: "22 Aug 2021",
+  //   runtime: "dohuya min",
+  //   genre: ["Adventure", "Erotica", "Fantasy"],
+  //   director: "God",
+  //   writer: "God",
+  //   actors: ["Katya Razumnik"],
+  //   plot: "Биография о жизни маленькой девочки с пухлыми губами и хорошими фото в инсте",
+  //   country: "Belarus",
+  //   poster:
+  //     "https://sun9-49.userapi.com/impg/qQ-71eGuvnUOaA7lKY8LdCZaRd8ZeW5VZ3BZJg/S5MChhPoGXk.jpg?size=1080x1443&quality=96&sign=98229015d4be503e9f8289f87a8d67d1&type=album",
+  //   imdbRating: 7.6,
+  //   imdbVotes: 684604,
+  //   type: "movie",
+  //   boxOffice: "$318,087,620",
+  //   production: "1492 Pictures, Heyday Films, Warner Brothers",
+  // },
 ];
 
 export const trailers: ITrailer[] = [
